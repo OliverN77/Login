@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://static.vecteezy.com/system/resources/previews/000/573/258/original/map-pointer-gps-icon-vector.jpg">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="../static/styles/home.css">
+    <title>!Welcome!</title>
+</head>
+
+<body>
+
+    <header class="head">
+        <nav class="nav__nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a href="#">Home</a></li>
+                <li class="nav__li"><a href="#">Services</a></li>
+                <li class="nav__li"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="icons">
+            <ul class="icons__ul">
+                <li class="icons__li"><a class="material-symbols-outlined" href="#">Search</a></li>
+                <li class="icons__li"><a class="material-symbols-outlined" href="#">Account_circle</a></li>
+                <li class="icons__li"><a class="material-symbols-outlined" href="{{ url_for('index') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    {% if welcome %}
+    <p class="welcome">{{ welcome }}</p>
+    {% endif %}
+    <h1>Recommendations Cheap travels</h1>
+
+    <section class="section__home">
+        <div class="item">
+            <h2>Hacienda Napoles</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/P%C3%B3rtico_Hacienda_N%C3%A1poles.JPG"
+                alt="hacienda-napoles">
+            <p>Hacienda Nápoles, now known as Hacienda Nápoles Theme Park, is a family entertainment center in Puerto
+                Triunfo, Antioquia, Colombia.</p>
+        </div>
+        <div class="item">
+            <h2>Piedra del peñol</h2>
+            <img src="https://estaticos.elcolombiano.com/documents/10157/0/858x565/39c0/780d565/none/11101/EKHB/image_content_34404638_20191011152804.jpg"
+                alt="piedra-peñol">
+            <p>El Peñol is a monolithic formation located at the town and municipality of Guatapé, Antioquia in
+                Colombia. A viewing spot has been constructed on top of the rock.</p>
+        </div>
+        <div class="item">
+            <h2>Parque Arvi</h2>
+            <img src="https://estaticos.elcolombiano.com/documents/10157/0/882x565/51c0/780d565/center/11101/PKDY/image_content_30881063_20180420183707.jpg"
+                alt="parque-arvi">
+            <p> Parque Arvi is a natural park located in the northeastern region of Medellín, Colombia. It is a part of
+                the Metropolitan Area of Medellín.</p>
+        </div>
+    </section>
+</body>
+
+</html>

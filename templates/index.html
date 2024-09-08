@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://e7.pngegg.com/pngimages/384/706/png-clipart-computer-icons-user-login-gender-miscellaneous-desktop-wallpaper-thumbnail.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <!-- Boton alternativo -->
+    <button class="altern__button" id="alternButton">Register/Login</button>
+    <!-- Tarjeta giratoria -->
+    <div class="flipper-card">
+        <div class="flipper-card-inner" id="flipperCardInner">
+            <!-- Parte frontal de la tarjeta -->
+            <div class="flipper-card-front">
+                <h1>Login</h1>
+                <!-- Mostrar mensaje de error si existe -->
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+                {% if success %}
+                <p style="color: green;">{{ success }}</p>
+                {% endif %}
+                <!-- Formulario de inicio de sesión -->
+                <form class="login" method="POST" action="/login">
+                    <input type="hidden" name="form_type" value="login">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <a href="#">Forgot password?</a>
+                    <button class="login__button" type="submit">Sign in</button>
+                </form>
+            </div>
+            <!-- Parte trasera de la tarjeta -->
+            <div class="flipper-card-back">
+                <h2>Sign up</h2>
+                <!-- Formulario de registro -->
+                <form class="register" method="POST" action="/register">
+                    <input type="hidden" name="form_type" value="register">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <label>LastName</label>
+                    <input type="text" name="lastname" placeholder="Lastname" required>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label>Password</label>
+                    <input class="password" name="password" type="password" placeholder="Password" required>
+                    <button class="register__button" type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

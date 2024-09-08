@@ -1,0 +1,148 @@
+/* Variables */
+:root{
+    --text-color:#fff;
+    --main-color:#fbbc04;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d3d3d3;
+}
+
+.welcome{
+    color: #070;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+/*Menú de navegación*/
+
+.head{
+    background-color: #333;
+    color: var(--text-color);
+}
+
+.nav__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav__ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__li{
+    list-style: none;
+    padding: 20px;
+}
+
+.nav__ul  a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.icons{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: row;
+}
+
+.icons__ul{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 10px;
+}
+
+.icons__li{
+    padding: 5px 10px;
+}
+
+.icons__li > a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.head a:hover{
+    color: var(--main-color);
+    transition: 1s;
+}
+
+h1{
+    margin: 20px 0;
+    text-align: center;
+}
+
+/*Sección de inicio*/
+
+.section__home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+
+.item{
+    background-color: #f1f1f1;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.item > img{
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.item > h2{
+    margin: 20px 0;
+}
+
+
+.item > p{
+    margin: 20px 0;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 768px){    
+    .nav__nav, .nav__ul, .nav__li, .nav__li > a{
+        flex-direction: row;
+        font-size: 100%;
+        padding: 5px 3px;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .icons,.icons__ul,.icons__li,.icons__li > a{
+        margin: auto;
+        padding: 5.5px 2px;
+    }
+
+}
